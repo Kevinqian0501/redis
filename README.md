@@ -51,4 +51,4 @@ do is an attempt to solve a problem in real time
 
 
 ## 1.2 Data Structure
-![structure](images/structure.png)
+![structure](images/structures.png)
