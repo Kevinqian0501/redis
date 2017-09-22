@@ -1,0 +1,12 @@
+$ wget http://download.redis.io/releases/redis-4.0.2.tar.gz
+$ tar xzf redis-4.0.2.tar.gz
+$ cd redis-4.0.2
+$ make
+
+~:$ wget -q http://peak.telecommunity.com/dist/ez_setup.py
+~:$ sudo python ez_setup.py
+Downloading http://pypi.python.org/packages/2.7/s/setuptools/...
+[trimmed]
+Finished processing dependencies for setuptools==0.6c11
+~:$ sudo python -m easy_install redis hiredis
+
