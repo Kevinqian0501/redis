@@ -1,2 +1,2 @@
-# redit
-My doc for redit
+# redis
+My doc for redis
