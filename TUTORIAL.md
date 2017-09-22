@@ -3,6 +3,8 @@
 
 Redis is what is called a key-value store, often referred to as a NoSQL database. The essence of a key-value store is the ability to store some data, called a value, inside a key. This data can later be retrieved only if we know the exact key used to store it. 
 
+## 1. Variable
+
 ### `SET`
 We can use the command `SET` to store the value "fido" at key "server:name":
 ```
@@ -39,6 +41,7 @@ The problem is that doing the increment in this way will only work as long as th
     Client B increments 10 and sets count to 11.
 We wanted the value to be 12, but instead it is 11! This is because incrementing the value in this way is not an atomic operation. Calling the INCR command in Redis will prevent this from happening, because it is an atomic operation. Redis provides many of these atomic operations on different types of data.
 
+## 2. List
 ### `RPUSH`, `LPUSH`, `LLEN`, `LRANGE`, `LPOP`, and `RPOP`
 Redis also supports several more complex data structures. The first one we'll look at is a list. A list is a series of ordered values. Some of the important commands for interacting with lists are RPUSH, LPUSH, LLEN, LRANGE, LPOP, and RPOP. You can immediately begin working with a key as a list, as long as it doesn't already exist as a different type.
 
@@ -75,6 +78,7 @@ Note that the list now only has one element:
     LRANGE friends 0 -1 => 1) "Alice"
 
 
+## 3. Set
 ### `SADD`, `SREM`, `SISMEMBER`, `SMEMBERS` and `SUNION`
 
 The next data structure that we'll look at is a set. A set is similar to a list, except it does not have a specific order and each element may only appear once. Some of the important commands in working with sets are SADD, SREM, SISMEMBER, SMEMBERS and SUNION.
@@ -110,7 +114,7 @@ The next data structure that we'll look at is a set. A set is similar to a list,
 
 
 
-### `Hashes`
+## 4. `Hashes`
 
 Simple strings, sets and sorted sets already get a lot done but there is one more data type Redis can handle: Hashes.
 
@@ -146,6 +150,7 @@ Numerical values in hash fields are handled exactly the same as in simple string
 
 That wraps up the Try Redis tutorial. Please feel free to goof around with this console as much as you'd like.
 
+## 5. More
 ### Check out the following links to continue learning about Redis.
 
 
